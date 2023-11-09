@@ -409,39 +409,21 @@
                         </showcase-video-->
                         <div class="showcase swiper-container">
                             <showcase-intro inline-template="">
-                                <div class="showcase-intro ">
+                                <div class="showcase-intro" style="background-color: #000;color: #ffffff;">
                                     <div class="showcase-intro__shape">
-                                        <div class="showcase-intro__shape-frame" style="--color: #FF440A;">
-                                            <div class="showcase-intro__shape-media">
-                                                <media :autoplay="true" :lazy="true" :type="'picture'"
-                                                    inline-template="">
-                                                    <div :class="computedClasses"
-                                                        class="media media--cover media--lazy">
-                                                        <picture class="media__picture">
-                                                            <source media="(min-width: 1200px)"
-                                                                data-srcset="https://cdn.sidlee.com/-/media/sidlee/collections/lastframe--intro--sidleecom.jpg?mw=1920&amp;hash=17E11CAE231413C04538B2F455353A09">
-                                                            <source media="(min-width: 992px)"
-                                                                data-srcset="https://cdn.sidlee.com/-/media/sidlee/collections/lastframe--intro--sidleecom.jpg?mw=1280&amp;hash=86AD9276F8B8A81FC03B047F11B2C3ED">
-                                                            <source media="(min-width: 576px)"
-                                                                data-srcset="https://cdn.sidlee.com/-/media/sidlee/collections/lastframe--intro--sidleecom.jpg?mw=800&amp;hash=44B283C64F70B4284DFA35D922621F35">
-                                                            <!--img data-src="https://cdn.sidlee.com/-/media/sidlee/collections/lastframe--intro--sidleecom.jpg?mw=600&amp;hash=7168EEDCF5F39ED466C42D8BCBFCB6EA"
-                                                                alt="" class="media__picture-image lazy "-->
-                                                        </picture>
-                                                    </div>
-                                                </media>
+                                        <div class="showcase-intro__shape-frame">
+                                            <div class="showcase-intro__shape-media" style="margin-top: -75px;">
+                                                <img src="./jon-assent/images/esfera.png" alt="">
                                             </div>
                                         </div>
                                     </div>
                                     <div class="showcase-intro__nav">
-                                        <div class="showcase-intro__title">
-                                            Índice
-                                        </div>
                                         <ul class="showcase-intro__items">
                                             <li class="showcase-intro__item" style="transition-delay: 100ms;">
                                                 <button @click="changeSlide(0)" class="showcase-intro__item-link">
                                                     <span class="showcase-intro__item-bg" style="--color: #FF440A;">
                                                     </span>
-                                                    <span class="showcase-intro__item-title">
+                                                    <span class="showcase-intro__item-title" style="">
                                                         Time executivo
                                                     </span>
                                                     <span class="showcase-intro__item-icon">
