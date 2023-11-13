@@ -1,0 +1,75 @@
+body {
+    margin: 0;
+    overflow: hidden;
+}
+  
+.scroll-container {
+    display: flex;
+    width: 100vw;
+    height: 100vh;
+    overflow-x: hidden;
+    overflow-y: hidden;
+    white-space: nowrap;
+}
+  
+.content {
+    display: flex;
+}
+
+.eventos {
+    width: 100vw;
+    height:100vh;
+    display: flex;
+}
+
+.evento-titulo {
+    width: 40vw;
+    padding: 20px;
+    top: 0;
+    left: 0;
+    background-color: #d37321;
+    color: black;
+    font-family: 'Lato', sans-serif;
+    font-size: 36px;
+    font-weight: 700;
+}
+
+.evento-descricao{
+    display: flex;
+    width: 60vw;
+    transition: background-color 0.5s, color 0.5s;
+}
+
+.evento-descricao:hover {
+    background-color: black;
+    color: white;
+}
+
+.titulo-texto {
+    margin-top: 200px;
+    margin-left: 25px;
+    letter-spacing: 20px;
+}
+
+.subtitulo-texto {
+    color: white;
+    font-size: 22px;
+    margin-top: 10px;
+    margin-left: 25px;
+    letter-spacing: 5px;
+}
+
+.descricao-texto {
+    width: 400px;
+    height: 400px;
+    overflow: hidden;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.descricao-texto p {
+    margin: 0;
+    flex-grow: 1;
+    display: flex;
+    flex-wrap: wrap;
+}
