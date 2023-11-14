@@ -2,7 +2,7 @@ body {
     margin: 0;
     overflow: hidden;
 }
-  
+
 .scroll-container {
     display: flex;
     width: 100vw;
@@ -11,14 +11,14 @@ body {
     overflow-y: hidden;
     white-space: nowrap;
 }
-  
+
 .content {
     display: flex;
 }
 
 .eventos {
     width: 100vw;
-    height:100vh;
+    height: 100vh;
     display: flex;
 }
 
@@ -34,15 +34,12 @@ body {
     font-weight: 700;
 }
 
-.evento-descricao{
+.evento-descricao {
+    position: relative;
     display: flex;
     width: 60vw;
     transition: background-color 0.5s, color 0.5s;
-}
-
-.evento-descricao:hover {
-    background-color: black;
-    color: white;
+    box-shadow: 10px 0 30px rgba(0, 0, 0, 0.5);
 }
 
 .titulo-texto {
@@ -60,16 +57,55 @@ body {
 }
 
 .descricao-texto {
-    width: 400px;
-    height: 400px;
-    overflow: hidden;
-    display: flex;
-    flex-wrap: wrap;
+    margin-left: 40px;
+    margin-top: 40px;
+    width: 40%;
+    height: 40%;
+    white-space: pre-wrap;
+    font-family: 'Quicksand', sans-serif;
+    color: #000;
 }
 
 .descricao-texto p {
     margin: 0;
-    flex-grow: 1;
+}
+
+.evento-descricao:hover {
+    background-color: black;
+    color: #fff;
+}
+
+.evento-descricao * {
+    color: inherit;
+}
+
+.imagens-evento {
+    height: 95vh;
+    margin-top: 5vh;
+    margin-left: 50px;
     display: flex;
-    flex-wrap: wrap;
+    flex-direction: column;
+    justify-content: space-around;
+}
+
+.imagem-evento img {
+    width: 25vw;
+    height: 25vh;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
+}
+
+.imagem-principal {
+    position: absolute;
+    top: 0;
+    right: 40vw;
+    top: 50vh;
+    z-index: 1;
+}
+
+.imagem-principal img {
+    width: 40vw;
+    height: 40vh;
+    object-fit: cover;
+    border-radius: 15px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
 }
