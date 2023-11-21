@@ -94,7 +94,7 @@ body {
     box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
 }
 
-.imagem-principal {
+.video-principal {
     position: absolute;
     top: 0;
     right: 40vw;
@@ -102,10 +102,108 @@ body {
     z-index: 1;
 }
 
-.imagem-principal img {
+.video-principal video {
     width: 40vw;
-    height: 40vh;
-    object-fit: cover;
+    height: 45vh;
+    object-fit: contain;
     border-radius: 15px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+}
+
+.ver-mais {
+    font-family: 'Quicksand', sans-serif;
+    color: #d37321;
+}
+
+
+/* ESTILIZAÇÃO DA GALERIA */
+
+#modalEvento {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgb(0,0,0);
+    background-color: rgba(0,0,0,0.9);
+}
+
+.modal-content {
+    display: flex;
+    flex-direction: row;
+    margin: 2%;
+    width: 92vw;
+    height: 90vh;
+    position: relative;
+    background-color: rgb(0,0,0);
+    background-color: rgba(0,0,0,0.7);
+    overflow-x: hidden;
+    overflow-y: hidden;
+}
+
+.modal-galeria {
+    display: flex;
+    flex-wrap: wrap;
+    overflow-x: hidden;
+    margin-top: 20px;
+}
+
+
+.modal-galeria img {
+    width: calc(33.333% - 10px);
+    margin-right: 10px;
+    margin-bottom: 10px;
+    object-fit: cover;
+}
+
+
+.titulo-galeria {
+    min-width: 30%;
+    height: 100%;
+}
+
+.modal-content img {
+    width: 30%;
+    height: auto;
+    display: block;
+    margin: 10px;
+    margin-bottom: 35px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+}
+
+.close {
+    font-family: 'Quicksand', sans-serif;
+    position: absolute;
+    bottom: 15px;
+    right: 15px;
+    font-size: 16px;
+    color: #d37321;
+    cursor: pointer;
+    margin-right: 10%;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+
+.modal-content {
+    animation: fadeIn 0.7s;
+}
+
+.modal-galeria::-webkit-scrollbar {
+    width: 5px;
+}
+
+.modal-galeria::-webkit-scrollbar-thumb {
+    background-color: #d37421bd;
+    border-radius: 6px;
+}
+
+.modal-galeria::-webkit-scrollbar-track {
+    background-color: #000;
 }
