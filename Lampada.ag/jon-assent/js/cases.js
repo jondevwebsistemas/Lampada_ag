@@ -6,6 +6,16 @@ container.addEventListener('wheel', (e) => {
   e.preventDefault();
 });
 
+// const container = document.querySelector('.scroll-container');
+// const content = document.querySelector('.content');
+
+// container.addEventListener('wheel', (e) => {
+//   if (window.innerWidth > window.innerHeight) {
+//     container.scrollLeft += e.deltaY;
+//     e.preventDefault();
+//   }
+// });
+
 
 function abrirModal(marca, evento) {
   var modal = document.getElementById('modalEvento');
@@ -14,7 +24,7 @@ function abrirModal(marca, evento) {
 
   modalImagens.innerHTML = `
     <div class="modal-content">
-      <div class="evento-titulo titulo-galeria">
+      <div class="evento-titulo titulo-galeria galeria">
           <div class="text">
               <p class="titulo-texto text-uppercase">${marca}</p>
               <p class="subtitulo-texto text-uppercase">${evento}</p>
@@ -43,7 +53,7 @@ function abrirModal(marca, evento) {
   `;
   
   modal.style.display = 'block';
-  galeria.style.overflowX = 'scroll';
+  // galeria.style.overflowX = 'scroll';
 }
 
 
