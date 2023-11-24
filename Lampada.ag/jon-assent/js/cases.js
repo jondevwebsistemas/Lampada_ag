@@ -6,15 +6,39 @@ container.addEventListener('wheel', (e) => {
   e.preventDefault();
 });
 
-// const container = document.querySelector('.scroll-container');
-// const content = document.querySelector('.content');
+let touchStartX = 0;
+let touchMoveX = 0;
+let scrolling = false;
 
-// container.addEventListener('wheel', (e) => {
-//   if (window.innerWidth > window.innerHeight) {
-//     container.scrollLeft += e.deltaY;
-//     e.preventDefault();
-//   }
-// });
+container.addEventListener('touchstart', (e) => {
+  touchStartX = e.touches[0].clientX;
+  touchMoveX = touchStartX;
+  scrolling = true;
+});
+
+container.addEventListener('touchmove', (e) => {
+  if (!scrolling) return;
+
+  touchMoveX = e.touches[0].clientX;
+  const deltaX = touchStartX - touchMoveX;
+  container.scrollLeft += deltaX;
+
+  touchStartX = touchMoveX;
+  
+  e.preventDefault();
+});
+
+container.addEventListener('touchend', () => {
+  scrolling = false;
+});
+
+// Opcional: Evitar o comportamento nativo de scroll vertical
+container.addEventListener('touchmove', (e) => {
+  if (scrolling) {
+    e.preventDefault();
+  }
+}, { passive: false });
+
 
 
 function abrirModal(marca, evento) {
