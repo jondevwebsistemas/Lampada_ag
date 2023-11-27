@@ -1,0 +1,212 @@
+body {
+    margin: 0;
+    overflow: hidden;
+    font-size: 16px;
+}
+
+.scroll-container {
+    display: flex;
+    width: 100vw;
+    height: 100vh;
+    overflow-x: hidden;
+    overflow-y: hidden;
+    white-space: nowrap;
+    touch-action: pan-y;
+}
+
+.content {
+    display: flex;
+}
+
+.eventos {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+}
+
+.evento-titulo {
+    width: 40vw;
+    padding: 1.25rem;
+    top: 0;
+    left: 0;
+    background-color: #d37321;
+    color: black;
+    font-family: 'Lato', sans-serif;
+    font-size: 3rem;
+    font-weight: 700;
+}
+
+.evento-descricao {
+    position: relative;
+    display: flex;
+    width: 60vw;
+    transition: background-color 0.5s, color 0.5s;
+    box-shadow: 10px 0 30px rgba(0, 0, 0, 0.5);
+}
+
+.titulo-texto {
+    margin-top: 12.5rem;
+    margin-left: 1.56rem;
+    letter-spacing: 1.25rem;
+}
+
+.subtitulo-texto {
+    color: white;
+    font-size: 1.5rem;
+    margin-top: 0.625rem;
+    margin-left: 1.56rem;
+    letter-spacing: 0.32rem;
+}
+
+.descricao-texto {
+    margin-left: 2.5rem;
+    margin-top: 2.5rem;
+    width: 40%;
+    height: 40%;
+    white-space: pre-wrap;
+    font-family: 'Quicksand', sans-serif;
+    color: #000;
+    font-size: 1.0rem;
+}
+
+.descricao-texto p {
+    margin: 0;
+}
+
+.evento-descricao:hover {
+    background-color: black;
+    color: #fff;
+}
+
+.evento-descricao * {
+    color: inherit;
+}
+
+.imagens-evento {
+    height: 95vh;
+    margin-top: 5vh;
+    margin-left: 3.125rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+
+.imagem-evento img {
+    width: 25vw;
+    height: 25vh;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
+}
+
+.video-principal {
+    position: absolute;
+    top: 0;
+    right: 40vw;
+    top: 50vh;
+    z-index: 1;
+}
+
+.video-principal video {
+    width: 40vw;
+    height: 45vh;
+    object-fit: contain;
+    border-radius: 15px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+}
+
+.ver-mais {
+    font-family: 'Quicksand', sans-serif;
+    font-size: 1rem;
+    color: #d37321;
+}
+
+
+/* ESTILIZAÇÃO DA GALERIA */
+
+#modalEvento {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgb(0,0,0);
+    background-color: rgba(0,0,0,0.9);
+}
+
+.modal-content {
+    display: flex;
+    flex-direction: row;
+    margin: 2%;
+    width: 92vw;
+    height: 90vh;
+    position: relative;
+    background-color: rgba(0,0,0,0.7);
+    overflow-x: hidden;
+    overflow-y: hidden;
+}
+
+.modal-galeria {
+    display: flex;
+    flex-wrap: wrap;
+    overflow-x: hidden;
+    margin-top: 1.25rem;
+}
+
+
+.modal-galeria img {
+    width: calc(33.333% - 10px);
+    margin-right: 0.625rem;
+    margin-bottom: 0.625rem;
+    object-fit: cover;
+}
+
+
+.titulo-galeria {
+    min-width: 30%;
+    height: 100%;
+}
+
+.modal-content img {
+    width: 30%;
+    height: auto;
+    display: block;
+    margin: 0.625rem;
+    margin-bottom: 2.19rem;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+}
+
+.close {
+    font-family: 'Quicksand', sans-serif;
+    position: absolute;
+    bottom: 0.94rem;
+    right: 0.94rem;
+    font-size: 1rem;
+    color: #d37321;
+    cursor: pointer;
+    margin-right: 10%;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+
+.modal-content {
+    animation: fadeIn 0.7s;
+}
+
+.modal-galeria::-webkit-scrollbar {
+    width: 5px;
+}
+
+.modal-galeria::-webkit-scrollbar-thumb {
+    background-color: #d37421bd;
+    border-radius: 6px;
+}
+
+.modal-galeria::-webkit-scrollbar-track {
+    background-color: #000;
+}
