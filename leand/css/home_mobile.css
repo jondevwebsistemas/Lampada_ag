@@ -1,0 +1,80 @@
+@media (orientation: portrait) {
+    
+    html, body{
+        font-size: 5pt;
+    }
+
+    #video_intro {
+        top: 30%;
+    }
+
+    .section1 {
+        position: relative;
+    }
+
+    .section2 {
+        position: relative;
+    }
+
+    .video_bg {
+        visibility: hidden;
+    }
+    
+    .text_1 {
+        width: 90%;
+        left: 5%;
+        right: 5%;
+    }
+
+    .text_1 p{
+        font-size: 2rem;
+    }
+
+    .section3 {
+        position: relative;
+        flex-direction:column-reverse;
+        justify-content: center;
+        margin: auto;
+    }
+
+    .img_1 {
+        display: flex;
+        margin: auto;
+    }
+
+    .img_1 img {
+        display: flex;
+        max-width: 60%;
+        filter: none;
+        margin: auto;
+    }
+
+    .text_2 {
+        margin-left: 0;
+    }
+    
+    .text_2 p {
+        font-size: 1.8rem;
+    }
+    
+    .text_2 a {
+        font-size: 2rem;
+    }
+    
+    .section4 {
+        position: relative;
+        width:100%;
+    }
+
+    .section4 div {
+        position: absolute;
+        display: flex;
+        width: 100%;
+        bottom: 40%;
+        text-align: center;
+    }
+
+    .section4 p Gnoblank {
+        letter-spacing: 0em;
+    }
+}

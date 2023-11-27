@@ -1,0 +1,48 @@
+
+.navbar {
+    z-index: 1;
+}
+
+#menu a {
+    font-family: noir;
+    color: #d37321
+}
+
+#menu a:hover {
+    color: #ffffff
+}
+
+.menu_lateral {
+    font-family: 'Quicksand', sans-serif;
+    font-size: x-large;
+    text-align: right;
+    padding-right: 2%;
+    position: absolute;
+    right: 0%;
+    background-color: black;
+    width: 20%;
+    height: 100%;
+}
+
+.menu_lateral ul {
+    list-style: none;
+}
+
+.menu_lateral a{
+    color: #676767;
+    text-decoration: none;
+}
+
+.menu_lateral a:hover{
+    color: white;
+    font-size: xx-large
+} 
+
+.menu_lateral_sub {
+    font-size: medium;
+    padding-right: 5%;
+}
+
+.menu_lateral_sub a:hover {
+    font-size: x-large
+}
