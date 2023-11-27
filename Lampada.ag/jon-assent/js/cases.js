@@ -32,7 +32,7 @@ container.addEventListener('touchend', () => {
   scrolling = false;
 });
 
-// Opcional: Evitar o comportamento nativo de scroll vertical
+
 container.addEventListener('touchmove', (e) => {
   if (scrolling) {
     e.preventDefault();
@@ -77,7 +77,6 @@ function abrirModal(marca, evento) {
   `;
   
   modal.style.display = 'block';
-  // galeria.style.overflowX = 'scroll';
 }
 
 
